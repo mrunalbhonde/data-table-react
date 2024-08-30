@@ -90,6 +90,7 @@ function ProductTable({ products, filterText, inStockOnly }) {
 function SearchBar({ filterText, inStockOnly, onFilterTextChange, onInStockOnlyChange}) {
   return (
     <form>
+      <div>
       <input 
         type="text" 
         value={filterText} 
@@ -98,6 +99,8 @@ function SearchBar({ filterText, inStockOnly, onFilterTextChange, onInStockOnlyC
           onFilterTextChange(e.target.value);
         }}
         />
+      </div>
+      <div>
       <label>
         <input 
           type="checkbox" 
@@ -109,6 +112,7 @@ function SearchBar({ filterText, inStockOnly, onFilterTextChange, onInStockOnlyC
         {' '}
         Only show products in stock
       </label>
+      </div>
     </form>
   );
 }
